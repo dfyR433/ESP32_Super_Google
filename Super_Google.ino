@@ -75,11 +75,12 @@ void waitForSerialInput() {
     }
   }
 
-  Serial.println("Enter PASSWORD (min 8 chars for WPA2, or add a dot for open network):");
+  Serial.println("Enter PASSWORD (min 8 chars for WPA2, or leave it empty for open network):");
   while (inputPASS == "") {
     if (Serial.available()) {
       inputPASS = Serial.readStringUntil('\n');
       inputPASS.trim();
+      break;
     }
   }
 }
