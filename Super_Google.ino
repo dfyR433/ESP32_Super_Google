@@ -99,6 +99,31 @@ void setup() {
   Serial.begin(115200);
   delay(1000);
 
+  Serial.println("                              Super Google                              ");
+  Serial.println("                                                                        ");
+  Serial.println("                                   =                                    ");
+  Serial.println("                                ==   ==                                 ");
+  Serial.println("                              ==       ==                               ");
+  Serial.println("                            ==           ==                             ");
+  Serial.println("                          ==               ==                           ");
+  Serial.println("                        ==                   ==                         ");
+  Serial.println("                      ==           ***         ==                       ");
+  Serial.println("                    ==           ***             ==                     ");
+  Serial.println("                  ==           ***                 ==                   ");
+  Serial.println("                ==           ***                     ==                 ");
+  Serial.println("              ==           *****************           ==               ");
+  Serial.println("            ==                         ***               ==             ");
+  Serial.println("          ==                         ***                   ==           ");
+  Serial.println("        ==                         ***                       ==         ");
+  Serial.println("      ==                        ********                       ==       ");
+  Serial.println("    ==                            ****                           ==     ");
+  Serial.println("  ==                               **                              ==   ");
+  Serial.println("==                                                                   == ");
+  Serial.println("   = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =    ");
+  Serial.println("                                                                        ");
+  Serial.println("                                by: dfyR433                             ");
+  delay(500);
+
   waitForSerialInput();
 
   WiFi.mode(WIFI_AP);
