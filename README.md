@@ -4,3 +4,5 @@
 - Set the network Name and password, and view the results on the serial monitor.
 - Also, you can make an open network.
 - Please note that this is for educational purposes only.
+# New Evil Portal
+- Wi-Fi Password login page.
