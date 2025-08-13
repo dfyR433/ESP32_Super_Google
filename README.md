@@ -20,10 +20,6 @@ It can serve different HTML login pages (Google-style or Wi-Fi password prompt) 
 ## Requirements
 - ESP32 board
 - Arduino IDE with **ESP32 core** installed
-- Libraries:
-  - `WiFi.h` (built-in)
-  - `WebServer.h` (built-in)
-  - `DNSServer.h` (built-in)
 
 ---
 
@@ -31,7 +27,7 @@ It can serve different HTML login pages (Google-style or Wi-Fi password prompt) 
 1. Open Arduino IDE
 2. Install **ESP32 board support** (Tools → Board → Board Manager → Search "ESP32")
 3. Select your ESP32 board (e.g., ESP32 Dev Module)
-4. Copy `main.ino` into Arduino IDE
+4. Copy `Super_Google.ino` into Arduino IDE
 5. Connect ESP32 via USB
 6. Upload sketch
 
